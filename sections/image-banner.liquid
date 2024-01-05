@@ -123,7 +123,7 @@
               {{ block.settings.heading }}
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="max-width:{{ block.settings.width_size }}%;">
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
@@ -421,6 +421,16 @@
           ],
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        }, 
+        {
+          "type": "range",
+          "id": "width_size",
+          "min": 50,
+          "max": 100,
+          "step": 2,
+          "unit": "%",
+          "label": "Width size",
+          "default": 100
         }
       ]
     },
