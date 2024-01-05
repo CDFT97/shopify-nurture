@@ -29,10 +29,23 @@
     {%- if section.blocks.size == 1 -%}
       <div
         class="announcement-bar{% if section.settings.show_social %} announcement-bar--one-announcement{% endif %}"
+        style="justify-content:{{ section.blocks.first.settings.horizontal_alignment }}"
         role="region"
         aria-label="{{ 'sections.header.announcement' | t }}"
         {{ block.shopify_attributes }}
       >
+        
+      
+        {% if section.blocks.first.settings.icon1 != "none" %}
+          <div class="svg-icon">
+            {% if section.blocks.first.settings.icon1 == "phone"%}
+              {% render 'svg-phone' %}
+            {% else if section.blocks.first.settings.icon1 == "mail"%}
+              {% render 'svg-mail' %}
+            {% endif %}
+          </div>
+        {% endif %}
+
         {%- if section.blocks.first.settings.text != blank -%}
           {%- if section.blocks.first.settings.link != blank -%}
             <a
@@ -40,7 +53,7 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-          <p class="announcement-bar__message h5">
+          <p class="announcement-bar__message h5 mr-1">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {% render 'icon-arrow' %}
@@ -50,6 +63,35 @@
             </a>
           {%- endif -%}
         {%- endif -%}
+
+        {% if section.blocks.first.settings.icon2 != "none" %}
+          <div class="svg-icon">
+            {% if section.blocks.first.settings.icon2 == "phone"%}
+              {% render 'svg-phone' %}
+            {% else if section.blocks.first.settings.icon2 == "mail"%}
+              {% render 'svg-mail' %}
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {%- if section.blocks.first.settings.text2 != blank -%}
+          {%- if section.blocks.first.settings.link2 != blank -%}
+            <a
+              href="{{ section.blocks.first.settings.link2 }}"
+              class="announcement-bar__link link link--text focus-inset animate-arrow"
+            >
+          {%- endif -%}
+          <p class="announcement-bar__message h5">
+            <span>{{ section.blocks.first.settings.text2 | escape }}</span>
+            {%- if section.blocks.first.settings.link2 != blank -%}
+              {% render 'icon-arrow' %}
+            {%- endif -%}
+          </p>
+          {%- if section.blocks.first.settings.link2 != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+
       </div>
     {%- elsif section.blocks.size > 1 -%}
       <slideshow-component
@@ -293,16 +335,88 @@
       "name": "t:sections.announcement-bar.blocks.announcement.name",
       "settings": [
         {
+          "id": "horizontal_alignment",
+          "label": "Horizontal alignment",
+          "type": "select",
+          "options": [
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "id": "icon1",
+          "type": "select",
+          "label": "Icon 1",
+          "options": [
+            {
+              "value": "none",
+              "label": "none"
+            },
+            {
+              "value": "phone",
+              "label": "Phone"
+            },
+            {
+              "value": "mail",
+              "label": "Mail"
+            }
+          ],
+          "default": "none"
+        },
+        {
           "type": "text",
           "id": "text",
           "default": "Welcome to our store",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          "label": "Text 1"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+          "label": "Link 1"
+        },
+        {
+          "id": "icon2",
+          "type": "select",
+          "label": "Icon 2",
+          "options": [
+            {
+              "value": "none",
+              "label": "none"
+            },
+            {
+              "value": "phone",
+              "label": "Phone"
+            },
+            {
+              "value": "mail",
+              "label": "Mail"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "default": "Welcome to our store",
+          "label": "Text 2"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Link 2"
         }
+        
       ]
     }
   ],

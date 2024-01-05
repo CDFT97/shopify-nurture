@@ -3516,3 +3516,13 @@ details-disclosure > details {
 .h-0 {
   height: 0;
 }
+.ml-1 {
+  margin-left: 1rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+.svg-icon {
+  margin-top: 7px;
+  margin-right: 0.5em;
+}
