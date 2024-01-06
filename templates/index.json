@@ -35,6 +35,9 @@
         "87aeb16b-8108-43f0-880e-2571d8a3cb87",
         "button"
       ],
+      "custom_css": [
+        ".button {color: #fff; background-color: #4FD6C5;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/shutterstock_664478614_1.png",
         "image_overlay_opacity": 10,
