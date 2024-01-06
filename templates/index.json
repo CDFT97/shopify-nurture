@@ -10,6 +10,14 @@
             "heading_size": "h1"
           }
         },
+        "87aeb16b-8108-43f0-880e-2571d8a3cb87": {
+          "type": "text",
+          "settings": {
+            "text": "Our proven sleep and behaviour programs can change your life, give you the support you need to bring the balance back into your parenting",
+            "text_style": "subtitle",
+            "width_size": 74
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -24,6 +32,7 @@
       },
       "block_order": [
         "heading",
+        "87aeb16b-8108-43f0-880e-2571d8a3cb87",
         "button"
       ],
       "settings": {
