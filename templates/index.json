@@ -132,9 +132,9 @@
         "title": "Featured Collection",
         "collection": "our-programs",
         "product_count": 4,
-        "price_text_color": "#000",
+        "price_text_color": "#edc0bd",
         "title_button": "View Programs",
-        "button_text_color": "#fff",
+        "button_text_color": "#ffffff",
         "button_background_color": "#4fd6c5"
       }
     }
