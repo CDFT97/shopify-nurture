@@ -66,13 +66,56 @@
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/btc-logo-footer_2.png"
           }
+        },
+        "182cdb91-f8eb-4675-87cf-1b7be738e43b": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/954sydney_2.png"
+          }
+        },
+        "d0458c7b-9cb0-4338-ab68-345747b9c06c": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/hellonamaste_2.png"
+          }
+        },
+        "7867b4e9-6795-4755-8fd0-ed9e90be1774": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/practicalparenting_2.png"
+          }
+        },
+        "11a0578a-0c3c-4480-959a-7ad0f71aa2e4": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/kidsgray.png"
+          }
+        },
+        "ab346c63-6f36-4cc3-9816-5171ca2d56f9": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/huffpost-logo-transparent_2.png"
+          }
+        },
+        "d521c5e5-f910-49af-bb17-730ad738f3de": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/2GBgrey.png"
+          }
         }
       },
       "block_order": [
         "2e744c5b-2a6c-4f29-945f-c0b6d69c9747",
-        "7ee75434-2feb-4fc3-8c7a-3eadcdda89f5"
+        "7ee75434-2feb-4fc3-8c7a-3eadcdda89f5",
+        "182cdb91-f8eb-4675-87cf-1b7be738e43b",
+        "d0458c7b-9cb0-4338-ab68-345747b9c06c",
+        "7867b4e9-6795-4755-8fd0-ed9e90be1774",
+        "11a0578a-0c3c-4480-959a-7ad0f71aa2e4",
+        "ab346c63-6f36-4cc3-9816-5171ca2d56f9",
+        "d521c5e5-f910-49af-bb17-730ad738f3de"
       ],
       "settings": {
+        "title": "Default Title",
         "brand_padding_top": 50,
         "brand_padding_bottom": 0,
         "brand_padding_top_xs": 40,
