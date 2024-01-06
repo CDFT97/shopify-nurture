@@ -45,7 +45,13 @@
               {{- section.settings.title_button | escape -}}
             </a>
           {%- endif -%}
-          <h4 class="text-center fs-16" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
+
+          
+          <div class="start-container">
+            {% render 'five-star-svg' %}
+          </div>
+
+          <h4 class="text-center fs-16 d-inline-block" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
           <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">{{ product.price | money }}</p>
         </a>
       </div>
@@ -54,6 +60,9 @@
 </div>
 
 <style>
+  .start-container {
+    margin-top: 15px;
+  }
   .figure {
     position: absolute;
     margin-top: 9%;
