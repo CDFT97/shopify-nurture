@@ -1,6 +1,6 @@
 <!-- our-brand-area start -->
 <section class="our-brand-logo">
-  <h2 class="text-center" style="font-size: 16px;">{{ section.settings.title |  upcase }}</h2>
+  <h2 class="text-center mb-2" style="font-size: 16px;">{{ section.settings.title |  upcase }}</h2>
 
   <div class="brand-logo owl-carousel owl-theme custom-logo-list" id="brand-logo" style="grid-template-columns:{% for block in section.blocks %}auto {% endfor %};">
     {% for block in section.blocks %}
@@ -193,5 +193,8 @@
     display: grid;
     margin: 0 auto;
     width: 90%;
+  }
+  .mb-2 {
+    margin-bottom: 2.5em;
   }
 </style>
