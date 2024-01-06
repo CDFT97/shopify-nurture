@@ -127,9 +127,15 @@
     "8fb1a8bb-a3a2-413e-bedf-f5b155126e14": {
       "type": "collection-slider",
       "settings": {
+        "margin_top": 60,
+        "margin_bottom": 75,
         "title": "Featured Collection",
         "collection": "our-programs",
-        "product_count": 4
+        "product_count": 4,
+        "price_text_color": "#000",
+        "title_button": "View Programs",
+        "button_text_color": "#fff",
+        "button_background_color": "#4fd6c5"
       }
     }
   },
