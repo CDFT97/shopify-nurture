@@ -29,7 +29,7 @@
     {% for product in collection.products limit: product_limit %}
       <div class="carousel-cell text-center">
 
-        {%- if section.settings.title_button != blank -%}
+        {% comment %} {%- if section.settings.title_button != blank -%}
           <a
             onmouseover="showButton({{ product.id }})"
             id="button-{{ product.id }}"
@@ -38,7 +38,7 @@
             style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
             {{- section.settings.title_button | escape -}}
           </a>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
 
         <a
           class="link-style"
@@ -46,6 +46,16 @@
           onmouseover="showButton({{ product.id }})"
           onmouseout="hideButton({{ product.id }})">
           <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
+          {%- if section.settings.title_button != blank -%}
+            <a
+              onmouseover="showButton({{ product.id }})"
+              id="button-{{ product.id }}"
+              href="{{ product.url | within: collection }}"
+              class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product "
+              style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
+              {{- section.settings.title_button | escape -}}
+            </a>
+          {%- endif -%}
           <h4 class="text-center fs-16" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
           <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">{{ product.price | money }}</p>
         </a>
@@ -61,8 +71,9 @@
   }
   .button-product {
     position: absolute;
-    top: 60%;
+    height: 0;
     right: 10%;
+    margin-top: -4em;
     /* display: none; */
   }
   .img-explore {
@@ -117,12 +128,12 @@
 
 <script>
   function showButton(id) {
-    const button = document.querySelector(`#button-${id}`)
-    button.classList.remove("d-none")
+    // const button = document.querySelector(`#button-${id}`)
+    // button.classList.remove("d-none")
   }
   function hideButton(id) {
-    const button = document.querySelector(`#button-${id}`)
-    button.classList.add("d-none")
+    // const button = document.querySelector(`#button-${id}`)
+    // button.classList.add("d-none")
   }
 </script>
 
