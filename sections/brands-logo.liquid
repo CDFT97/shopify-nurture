@@ -1,6 +1,8 @@
 <!-- our-brand-area start -->
 <section class="our-brand-logo">
-  <div class="brand-logo owl-carousel owl-theme" id="brand-logo">
+  <h2 class="text-center" style="font-size: 16px;">{{ section.settings.title |  upcase }}</h2>
+
+  <div class="brand-logo owl-carousel owl-theme custom-logo-list" id="brand-logo" style="grid-template-columns:{% for block in section.blocks %}auto {% endfor %};">
     {% for block in section.blocks %}
     <div class="item">
       <div class="brand-img">
@@ -53,6 +55,12 @@
 {
   "name": "Brand Logo",
   "settings": [
+  {
+    "type": "text",
+    "label": "Title",
+    "default": "Default Title",
+    "id": "title"
+  },
   {
     "type": "header",
     "content": "Section Padding"
@@ -165,7 +173,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid #ebebeb;
+    /* border: 1px solid #ebebeb; */
     border-right-color: transparent;
     padding: 25px 0;
   }
@@ -180,5 +188,10 @@
     -webkit-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+  }
+  .custom-logo-list {
+    display: grid;
+    margin: 0 auto;
+    width: 90%;
   }
 </style>

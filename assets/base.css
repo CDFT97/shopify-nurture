@@ -3526,3 +3526,6 @@ details-disclosure > details {
   margin-top: 7px;
   margin-right: 0.5em;
 }
+.text-center {
+  text-align: center;
+}
