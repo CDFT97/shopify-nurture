@@ -34,8 +34,8 @@
     "header": {
       "type": "header",
       "settings": {
-        "transparent_bar": false,
-        "center_menu": false,
+        "transparent_bar": true,
+        "center_menu": true,
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
