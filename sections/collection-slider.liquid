@@ -34,7 +34,7 @@
             onmouseover="showButton({{ product.id }})"
             id="button-{{ product.id }}"
             href="{{ product.url | within: collection }}"
-            class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product d-none"
+            class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product "
             style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
             {{- section.settings.title_button | escape -}}
           </a>
