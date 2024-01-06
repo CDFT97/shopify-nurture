@@ -60,10 +60,17 @@
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/image_2.png"
           }
+        },
+        "7ee75434-2feb-4fc3-8c7a-3eadcdda89f5": {
+          "type": "single_brand",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/btc-logo-footer_2.png"
+          }
         }
       },
       "block_order": [
-        "2e744c5b-2a6c-4f29-945f-c0b6d69c9747"
+        "2e744c5b-2a6c-4f29-945f-c0b6d69c9747",
+        "7ee75434-2feb-4fc3-8c7a-3eadcdda89f5"
       ],
       "settings": {
         "brand_padding_top": 50,
@@ -71,7 +78,7 @@
         "brand_padding_top_xs": 40,
         "brand_padding_bottom_xs": 40,
         "brand_check": true,
-        "brand_bgcolor": "#fff"
+        "brand_bgcolor": "#ffffff"
       }
     },
     "featured_collection": {
