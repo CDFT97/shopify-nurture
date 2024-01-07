@@ -159,7 +159,7 @@
         "show_figure_background": false,
         "background_color": "#f8f8f8",
         "price_text_color": "#edc0bd",
-        "title_button": "View Programs",
+        "title_button": "",
         "button_text_color": "#ffffff",
         "button_background_color": "#000000"
       }
