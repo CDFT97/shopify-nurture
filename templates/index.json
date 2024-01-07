@@ -171,8 +171,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/phone.png",
-            "title": "20+ years of  consultant experience",
-            "text": "",
+            "title": "",
+            "text": "<h3><strong>20+<\/strong> YEARS OF CONSULTANT EXPERIENCE<\/h3>",
             "link_label": "",
             "link": ""
           }
