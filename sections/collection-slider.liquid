@@ -1,25 +1,26 @@
 {%- capture flickity_options -%}
-  {
-    "prevNextButtons": true,
-    "pageDots": false,
-    "contain": true,
-    "cellAlign": "left",
-    "groupCells": true,
-    "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
-  }
-  {%- endcapture -%}
+{
+"prevNextButtons": true,
+"pageDots": false,
+"contain": true,
+"cellAlign": "left",
+"groupCells": true,
+"arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+}
+{%- endcapture -%}
 
 
 <div class="figure">
   {% render 'figure1-svg' %}
 </div>
 
-<div class="featured-collection-slider page-width" style="margin-top: {{section.settings.margin_top}}px;margin-bottom: {{section.settings.margin_bottom}}px;">
+<div class="featured-collection-slider page-width"
+  style="margin-top: {{section.settings.margin_top}}px;margin-bottom: {{section.settings.margin_bottom}}px;">
 
   {% if section.settings.title != blank %}
-    <div class="section-header text-center mb-2">
-      <h2>{{ section.settings.title | escape }}</h2>
-    </div>
+  <div class="section-header text-center mb-2">
+    <h2>{{ section.settings.title | escape }}</h2>
+  </div>
   {% endif %}
 
   {%- assign collection = collections[section.settings.collection] -%}
@@ -27,34 +28,30 @@
 
   <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
     {% for product in collection.products limit: product_limit %}
-      <div class="carousel-cell text-center">
+    <div class="carousel-cell text-center">
 
-        <a
-          class="link-style"
+      <a class="link-style" href="{{ product.url | within: collection }}" onmouseover="showButton({{ product.id }})"
+        onmouseout="hideButton({{ product.id }})">
+        <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
+        {%- if section.settings.title_button != blank -%}
+        <a onmouseover="showButton({{ product.id }})" id="button-{{ product.id }}"
           href="{{ product.url | within: collection }}"
-          onmouseover="showButton({{ product.id }})"
-          onmouseout="hideButton({{ product.id }})">
-          <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
-          {%- if section.settings.title_button != blank -%}
-            <a
-              onmouseover="showButton({{ product.id }})"
-              id="button-{{ product.id }}"
-              href="{{ product.url | within: collection }}"
-              class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product d-none"
-              style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
-              {{- section.settings.title_button | escape -}}
-            </a>
-          {%- endif -%}
-
-          
-          <div class="start-container">
-            {% render 'five-star-svg' %}
-          </div>
-
-          <h4 class="text-center fs-16 d-inline-block" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
-          <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">{{ product.price | money }}</p>
+          class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product d-none"
+          style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
+          {{- section.settings.title_button | escape -}}
         </a>
-      </div>
+        {%- endif -%}
+
+
+        <div class="start-container">
+          {% render 'five-star-svg' %}
+        </div>
+
+        <h4 class="text-center fs-16 d-inline-block" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
+        <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">
+          {{ product.price | money }}</p>
+      </a>
+    </div>
     {% endfor %}
   </div>
 </div>
@@ -63,61 +60,74 @@
   .start-container {
     margin-top: 15px;
   }
+
   .figure {
     position: absolute;
     margin-top: 9%;
   }
+
   .button-product {
     position: absolute;
     height: 0;
     right: 10%;
     margin-top: -4em;
   }
+
   .img-explore {
     display: block;
     width: 100%;
     background-repeat: no-repeat;
     background-position: 50%;
   }
+
   .link-style {
     text-decoration: none;
     text-align: -webkit-center;
   }
+
   .fs-16 {
     font-size: 16px;
   }
+
   .featured-collection-slider {
     padding-left: 55px;
     padding-right: 55px;
     max-width: 85%;
     margin: 0 auto;
   }
+
   .featured-collection-slider .carousel-cell {
     width: 33%;
     padding: 0 15px;
     display: block;
   }
+
   .flickity-button:disabled {
     pointer-events: all !important;
     display: none;
   }
+
   .flickity-button {
     border: 2px solid #ccc !important;
   }
+
   @media screen and (max-width: 920px) {
     .featured-collection-slider {
       padding-left: 15px;
       padding-right: 15px;
     }
+
     .featured-collection-slider .carousel-cell {
       width: 50%;
     }
   }
+
   @media screen and (max-width: 767px) {
     .featured-collection-slider .carousel-cell {
       width: 100%;
     }
   }
+
   .flickity-prev-next-button {
     top: 40% !important;
   }
@@ -135,73 +145,78 @@
 </script>
 
 {% schema %}
-  {
+{
+  "name": "Collection Slider",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Margin top (px)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Margin bottom (px)",
+      "default": 75
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }, 
+    {
+      "type": "range",
+      "id": "product_count",
+      "step": 1,
+      "min": 3,
+      "max": 10,
+      "label": "Number of products to display",
+      "default": 3
+    }, 
+    {
+      "type": "color",
+      "id": "price_text_color",
+      "label": "Price text color",
+      "default": "#000"
+    }, 
+    {
+      "type": "text",
+      "id": "title_button",
+      "label": "Button Tittle",
+      "default": "View Programs"
+    }, 
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#fff"
+    }, 
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background color",
+      "default": "#000"
+    }
+  ],
+  "presets": [
+    {
+    "category": "Collection",
     "name": "Collection Slider",
-    "settings": [
-      {
-        "type": "range",
-        "id": "margin_top",
-        "step": 5,
-        "min": 0,
-        "max": 200,
-        "label": "Margin top (px)",
-        "default": 60
-      },
-      {
-        "type": "range",
-        "id": "margin_bottom",
-        "step": 5,
-        "min": 0,
-        "max": 200,
-        "label": "Margin bottom (px)",
-        "default": 75
-      },
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "Featured Collection"
-      },
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "Collection"
-      }, {
-        "type": "range",
-        "id": "product_count",
-        "step": 1,
-        "min": 3,
-        "max": 10,
-        "label": "Number of products to display",
-        "default": 3
-      }, {
-        "type": "color",
-        "id": "price_text_color",
-        "label": "Price text color",
-        "default": "#000"
-      }, {
-        "type": "text",
-        "id": "title_button",
-        "label": "Button Tittle",
-        "default": "View Programs"
-      }, {
-        "type": "color",
-        "id": "button_text_color",
-        "label": "Button text color",
-        "default": "#fff"
-      }, {
-        "type": "color",
-        "id": "button_background_color",
-        "label": "Button background color",
-        "default": "#000"
-      }
-    ],
-    "presets": [
-      {
-        "category": "Collection",
-        "name": "Collection Slider",
-        "settings": {}
-      }
-    ]
-  }
+    "settings": {}
+    }
+  ]
+}
 {% endschema %}
