@@ -181,8 +181,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screenshot_2.png",
-            "title": "30+ years midwif experience",
-            "text": "",
+            "title": "",
+            "text": "<h3><strong>30+<\/strong> YEARS MIDWIFE EXPERIECE<\/h3>",
             "link_label": "",
             "link": ""
           }
