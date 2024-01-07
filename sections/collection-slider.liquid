@@ -9,52 +9,54 @@
 }
 {%- endcapture -%}
 
+<div style="background-color: {{ section.settings.background_color  }};">
 
-<div class="figure {% if section.settings.show_figure_background == false %}d-none{% endif %}">
-  {% render 'figure1-svg' %}
-</div>
-
-<div class="featured-collection-slider page-width"
-  style="margin-top: {{section.settings.margin_top}}px;margin-bottom: {{section.settings.margin_bottom}}px;">
-
-  {% if section.settings.title != blank %}
-  <div class="section-header text-center mb-2">
-    <h2 style="color: {{ section.settings.title_text_color  }};">{{ section.settings.title | escape }}</h2>
+  <div class="figure {% if section.settings.show_figure_background == false %}d-none{% endif %}">
+    {% render 'figure1-svg' %}
   </div>
-  {% endif %}
 
-  {%- assign collection = collections[section.settings.collection] -%}
-  {%- assign product_limit = section.settings.product_count -%}
+  <div class="featured-collection-slider page-width"
+    style="margin-top: {{section.settings.margin_top}}px;margin-bottom: {{section.settings.margin_bottom}}px;padding-top:{{section.settings.padding_top}}px;padding-bottom:{{section.settings.padding_bottom}}px;">
 
-  <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
-    {% for product in collection.products limit: product_limit %}
-    <div class="carousel-cell text-center" style="width: {{ 100 |  divided_by: section.settings.product_show }}%;">
-
-      <a class="link-style" href="{{ product.url | within: collection }}" onmouseover="showButton({{ product.id }})"
-        onmouseout="hideButton({{ product.id }})">
-        <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
-        {%- if section.settings.title_button != blank -%}
-        <a onmouseover="showButton({{ product.id }})" id="button-{{ product.id }}"
-          href="{{ product.url | within: collection }}"
-          class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product d-none"
-          style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
-          {{- section.settings.title_button | escape -}}
-        </a>
-        {%- endif -%}   
-
-        <div class="start-container">
-          {% render 'five-star-svg' %}
-        </div>      
-
-        <h4 class="text-center fs-16 d-inline-block" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
-        <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">
-          {{ product.price | money }}</p>
-      </a>
+    {% if section.settings.title != blank %}
+    <div class="section-header text-center mb-2">
+      <h2 style="color: {{ section.settings.title_text_color  }};">{{ section.settings.title | escape }}</h2>
     </div>
-    {% endfor %}
-  </div>
-</div>
+    {% endif %}
 
+    {%- assign collection = collections[section.settings.collection] -%}
+    {%- assign product_limit = section.settings.product_count -%}
+
+    <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
+      {% for product in collection.products limit: product_limit %}
+      <div class="carousel-cell text-center" style="width: {{ 100 |  divided_by: section.settings.product_show }}%;">
+
+        <a class="link-style" href="{{ product.url | within: collection }}" onmouseover="showButton({{ product.id }})"
+          onmouseout="hideButton({{ product.id }})">
+          <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
+          {%- if section.settings.title_button != blank -%}
+          <a onmouseover="showButton({{ product.id }})" id="button-{{ product.id }}"
+            href="{{ product.url | within: collection }}"
+            class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %} button-product d-none"
+            style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
+            {{- section.settings.title_button | escape -}}
+          </a>
+          {%- endif -%}   
+
+          <div class="start-container">
+            {% render 'five-star-svg' %}
+          </div>      
+
+          <h4 class="text-center fs-16 d-inline-block" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
+          <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">
+            {{ product.price | money }}</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
 <style>
   .start-container {
     margin-top: 15px;
@@ -165,6 +167,24 @@
       "default": 75
     },
     {
+      "type": "range",
+      "id": "padding_top",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Padding top (px)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Padding bottom (px)",
+      "default": 0
+    },
+    {
       "type": "text",
       "id": "title",
       "label": "Heading",
@@ -204,6 +224,12 @@
       "id": "show_figure_background",
       "label": "Show the figure on background",
       "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fff"
     },
     {
       "type": "color",
