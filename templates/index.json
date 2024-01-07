@@ -129,19 +129,46 @@
       "settings": {
         "margin_top": 60,
         "margin_bottom": 75,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "title": "Featured Collection",
+        "title_text_color": "#000",
         "collection": "our-programs",
         "product_count": 4,
+        "product_show": 3,
+        "show_figure_background": true,
+        "background_color": "#fff",
         "price_text_color": "#edc0bd",
         "title_button": "View Programs",
         "button_text_color": "#ffffff",
         "button_background_color": "#4fd6c5"
+      }
+    },
+    "885beb2e-5c65-47cf-a31a-a96bffcb4ab2": {
+      "type": "collection-slider",
+      "settings": {
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 55,
+        "padding_bottom": 60,
+        "title": "{{ section.settings.collection.title }}",
+        "title_text_color": "#000",
+        "collection": "e-books",
+        "product_count": 3,
+        "product_show": 3,
+        "show_figure_background": true,
+        "background_color": "#fff",
+        "price_text_color": "#000",
+        "title_button": "View Programs",
+        "button_text_color": "#fff",
+        "button_background_color": "#000"
       }
     }
   },
   "order": [
     "image_banner",
     "cb7e04e1-7bfa-41ca-8659-0ed9a3bdba58",
-    "8fb1a8bb-a3a2-413e-bedf-f5b155126e14"
+    "8fb1a8bb-a3a2-413e-bedf-f5b155126e14",
+    "885beb2e-5c65-47cf-a31a-a96bffcb4ab2"
   ]
 }
