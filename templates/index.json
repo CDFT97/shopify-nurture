@@ -187,6 +187,16 @@
             "link": ""
           }
         },
+        "8688a8de-31d9-41af-9ed4-6906ffd01d23": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2.png",
+            "title": "",
+            "text": "<h3><strong>2<\/strong> PSYCOLOGICAL <br\/>DEGREES<\/h3>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "template--15213765296226__6f21e590-48fc-46c8-a714-f7783384713d-column-3": {
           "type": "column",
           "settings": {
@@ -200,6 +210,7 @@
       "block_order": [
         "template--15213765296226__6f21e590-48fc-46c8-a714-f7783384713d-column-1",
         "template--15213765296226__6f21e590-48fc-46c8-a714-f7783384713d-column-2",
+        "8688a8de-31d9-41af-9ed4-6906ffd01d23",
         "template--15213765296226__6f21e590-48fc-46c8-a714-f7783384713d-column-3"
       ],
       "settings": {
