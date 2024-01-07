@@ -10,7 +10,7 @@
 {%- endcapture -%}
 
 
-<div class="figure">
+<div class="figure {% if section.settings.show_figure_background == false %}d-none{% endif %}">
   {% render 'figure1-svg' %}
 </div>
 
@@ -19,7 +19,7 @@
 
   {% if section.settings.title != blank %}
   <div class="section-header text-center mb-2">
-    <h2>{{ section.settings.title | escape }}</h2>
+    <h2 style="color: {{ section.settings.title_text_color  }};">{{ section.settings.title | escape }}</h2>
   </div>
   {% endif %}
 
@@ -28,7 +28,7 @@
 
   <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
     {% for product in collection.products limit: product_limit %}
-    <div class="carousel-cell text-center">
+    <div class="carousel-cell text-center" style="width: {{ 100 |  divided_by: section.settings.product_show }}%;">
 
       <a class="link-style" href="{{ product.url | within: collection }}" onmouseover="showButton({{ product.id }})"
         onmouseout="hideButton({{ product.id }})">
@@ -40,12 +40,11 @@
           style="min-width: 80%;background-color:{{section.settings.button_background_color}};color:{{section.settings.button_text_color}};">
           {{- section.settings.title_button | escape -}}
         </a>
-        {%- endif -%}
-
+        {%- endif -%}   
 
         <div class="start-container">
           {% render 'five-star-svg' %}
-        </div>
+        </div>      
 
         <h4 class="text-center fs-16 d-inline-block" style="max-width: 200px;margin-bottom:0;">{{ product.title }}</h4>
         <p class="text-center" style="color:{{ section.settings.price_text_color  }}; font-size:18px;font-weight:700;">
@@ -97,7 +96,6 @@
   }
 
   .featured-collection-slider .carousel-cell {
-    width: 33%;
     padding: 0 15px;
     display: block;
   }
@@ -173,6 +171,12 @@
       "default": "Featured Collection"
     },
     {
+      "type": "color",
+      "id": "title_text_color",
+      "label": "Title text color",
+      "default": "#000"
+    },
+    {
       "type": "collection",
       "id": "collection",
       "label": "Collection"
@@ -186,6 +190,21 @@
       "label": "Number of products to display",
       "default": 3
     }, 
+    {
+      "type": "range",
+      "id": "product_show",
+      "step": 1,
+      "min": 3,
+      "max": 5,
+      "label": "Number of products to display in first view",
+      "default": 3
+    }, 
+    {
+      "type": "checkbox",
+      "id": "show_figure_background",
+      "label": "Show the figure on background",
+      "default": true
+    },
     {
       "type": "color",
       "id": "price_text_color",
