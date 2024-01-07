@@ -180,8 +180,9 @@
         "template--15213765296226__6f21e590-48fc-46c8-a714-f7783384713d-column-2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Screenshot_2.png",
+            "title": "30+ years midwif experience",
+            "text": "",
             "link_label": "",
             "link": ""
           }
