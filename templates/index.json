@@ -252,13 +252,13 @@
         "template--15213765296226__77abf5c7-8aba-48d1-98c7-16535989e482-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "View programs",
+            "button_link": "shopify:\/\/collections",
             "button_style_secondary": false,
             "button_text_color": "#fff",
-            "button_background_color": "#000",
-            "button_border_color": "#000",
-            "button_margin_right": 0
+            "button_background_color": "#4fd6c5",
+            "button_border_color": "#4fd6c5",
+            "button_margin_right": 10
           }
         }
       },
