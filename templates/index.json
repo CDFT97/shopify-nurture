@@ -260,12 +260,25 @@
             "button_border_color": "#4fd6c5",
             "button_margin_right": 10
           }
+        },
+        "6e73ce12-5ed8-4ab8-afde-309278ad918b": {
+          "type": "button",
+          "settings": {
+            "button_label": "More About Me",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "button_text_color": "#4fd6c5",
+            "button_background_color": "rgba(0,0,0,0)",
+            "button_border_color": "#4fd6c5",
+            "button_margin_right": 0
+          }
         }
       },
       "block_order": [
         "template--15213765296226__77abf5c7-8aba-48d1-98c7-16535989e482-heading-1",
         "template--15213765296226__77abf5c7-8aba-48d1-98c7-16535989e482-text-1",
-        "template--15213765296226__77abf5c7-8aba-48d1-98c7-16535989e482-button-1"
+        "template--15213765296226__77abf5c7-8aba-48d1-98c7-16535989e482-button-1",
+        "6e73ce12-5ed8-4ab8-afde-309278ad918b"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/IMG_9841_2.png",
