@@ -3535,3 +3535,8 @@ details-disclosure > details {
 .d-inline-block {
   display: inline-block;
 }
+.figure_container {
+  position: absolute;
+  right: -10%;
+  top: -18%;
+}
