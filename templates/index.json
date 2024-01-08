@@ -238,6 +238,7 @@
           "type": "heading",
           "settings": {
             "heading": "Meet Karen Faulkner",
+            "head_text_alignment": "start",
             "heading_size": "h1"
           }
         },
@@ -255,7 +256,7 @@
             "button_label": "View programs",
             "button_link": "shopify:\/\/collections",
             "button_style_secondary": false,
-            "button_text_color": "#fff",
+            "button_text_color": "#ffffff",
             "button_background_color": "#4fd6c5",
             "button_border_color": "#4fd6c5",
             "button_margin_right": 10
@@ -296,7 +297,8 @@
         "padding_top": 72,
         "padding_bottom": 36,
         "text_container_width": 85,
-        "img_margin_right": 10
+        "img_margin_right": 10,
+        "show_figure": true
       }
     }
   },
