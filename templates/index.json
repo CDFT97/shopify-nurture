@@ -300,6 +300,23 @@
         "img_margin_right": 10,
         "show_figure": true
       }
+    },
+    "6d1e8f61-0131-417a-ae09-16189b957d4d": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -308,6 +325,7 @@
     "8fb1a8bb-a3a2-413e-bedf-f5b155126e14",
     "885beb2e-5c65-47cf-a31a-a96bffcb4ab2",
     "6f21e590-48fc-46c8-a714-f7783384713d",
-    "77abf5c7-8aba-48d1-98c7-16535989e482"
+    "77abf5c7-8aba-48d1-98c7-16535989e482",
+    "6d1e8f61-0131-417a-ae09-16189b957d4d"
   ]
 }
