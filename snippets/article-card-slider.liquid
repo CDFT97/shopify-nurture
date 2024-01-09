@@ -26,7 +26,7 @@
       assign ratio = media_aspect_ratio
     endif
   -%}
-  <div class="article-card-wrapper card-wrapper underline-links-hover">
+  <div class="article-card-wrapper card-wrapper underline-links-hover" style="width: {{ article.image.src.width }}px;">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div
       class="
@@ -37,7 +37,7 @@
         {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
         {% if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
       "
-      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; width: {{ article.image.src.width }}px;"
     >
       <div
         class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
