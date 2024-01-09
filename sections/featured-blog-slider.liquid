@@ -27,13 +27,14 @@
 <div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
   <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
+      <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin" style="justify-content: {{ section.settings.head_text_alignment }};">
         <h2
           id="SectionHeading-{{ section.id }}"
           class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
+          style="color: {{ section.settings.head_text_color }};"
         >
           {{ section.settings.heading }}
         </h2>
@@ -75,7 +76,9 @@
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
-                show_excerpt: true
+                show_excerpt: true,
+                background_transparent: section.settings.background_transparent
+                image_height: section.settings.image_height
               %}
             </li>
           {%- endfor -%}
@@ -202,6 +205,32 @@
     },
     {
       "type": "select",
+      "id": "head_text_alignment",
+      "default": "center",
+      "label": "Title position",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "head_text_color",
+      "label": "Heading text color",
+      "default": "#000"
+    },
+    {
+      "type": "select",
       "id": "heading_size",
       "options": [
         {
@@ -256,6 +285,21 @@
       "default": true,
       "label": "t:sections.featured-blog.settings.show_image.label",
       "info": "t:sections.featured-blog.settings.show_image.info"
+    },
+    {
+      "type": "range",
+      "min": 200,
+      "max": 400,
+      "step": 2,
+      "id": "image_height",
+      "default": 200,
+      "label": "image height"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_transparent",
+      "default": true,
+      "label": "Set the background of the image container transparent"
     },
     {
       "type": "checkbox",
