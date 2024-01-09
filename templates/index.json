@@ -304,9 +304,16 @@
     "461a63a6-fad1-4c8b-b972-cba5960b1da0": {
       "type": "blog-slider",
       "settings": {
-        "title": "Blogs",
+        "margin_top": 60,
+        "margin_bottom": 75,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title": "Blog",
+        "text_size": 32,
+        "title_color": "#552473",
         "blog": "news",
-        "articles_count": 4
+        "articles_count": 4,
+        "image_brightness": 67
       }
     }
   },
