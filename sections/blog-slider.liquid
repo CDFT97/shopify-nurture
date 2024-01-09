@@ -10,7 +10,7 @@
 {%- endcapture -%}
 
 
-<div class="featured-collection-slider page-width">
+<div class="featured-collection-slider page-width" style="margin-top: {{section.settings.margin_top}}px;margin-bottom: {{section.settings.margin_bottom}}px;padding-top:{{section.settings.padding_top}}px;padding-bottom:{{section.settings.padding_bottom}}px;">
 {% if section.settings.title != blank %}
 <div class="section-header text-center">
   <h2>{{ section.settings.title | escape }}</h2>
@@ -21,9 +21,9 @@
  
   <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
     {% for article in section.settings.blog.articles limit: items_limit %}
-      <div class="carousel-cell">
+      <div class="carousel-cell" style="width: {{ article.image.width }}px;">
         <a href="{{ article.url }}">
-          <img class="img-explore" src="{{ article.image.src | img_url: 'master' }}">
+          <img class="img-explore img-size" src="{{ article.image.src | img_url: 'master' }}">
           <h4>{{ article.title }}</h4>
         </a>
       </div>  
@@ -33,6 +33,10 @@
 
 
 <style>
+
+.img-size {
+  height: 378px;
+}
 .featured-collection-slider{
   padding-left: 55px;
   padding-right: 55px;
@@ -67,6 +71,42 @@
 {
   "name": "Blog Slider",
   "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Margin top (px)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Margin bottom (px)",
+      "default": 75
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Padding top (px)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "step": 5,
+      "min": 0,
+      "max": 200,
+      "label": "Padding bottom (px)",
+      "default": 0
+    },
     {
       "type": "text",
       "id": "title",
