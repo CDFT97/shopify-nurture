@@ -76,7 +76,9 @@
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
-                show_excerpt: true
+                show_excerpt: true,
+                background_transparent: section.settings.background_transparent
+                image_height: section.settings.image_height
               %}
             </li>
           {%- endfor -%}
@@ -283,6 +285,21 @@
       "default": true,
       "label": "t:sections.featured-blog.settings.show_image.label",
       "info": "t:sections.featured-blog.settings.show_image.info"
+    },
+    {
+      "type": "range",
+      "min": 200,
+      "max": 400,
+      "step": 2,
+      "id": "image_height",
+      "default": 200,
+      "label": "image height"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_transparent",
+      "default": true,
+      "label": "Set the background of the image container transparent"
     },
     {
       "type": "checkbox",
