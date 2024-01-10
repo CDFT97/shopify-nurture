@@ -329,10 +329,10 @@
         "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1",
-            "heading_text_color": "#000",
-            "heading_width": 500
+            "heading": "Sign Up For Our Newsletter & Get 10% Off Your First Order",
+            "heading_size": "h2",
+            "heading_text_color": "#552473",
+            "heading_width": 436
           }
         },
         "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-email_form-1": {
