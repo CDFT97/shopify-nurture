@@ -16,19 +16,16 @@
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding" style="background: {{ section.settings.bg_color }};">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} mt-1 mx-auto"
             {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
+            style="color: {{ block.settings.heading_text_color }};width: {{ block.settings.heading_width }}%;"
           >
             {{ block.settings.heading }}
           </h2>
@@ -36,10 +33,12 @@
           <div
             class="newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
+            style="color: {{ block.settings.subheading_text_color }};"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
-              style="--animation-order: {{ forloop.index }};"
+              style="--animation-order: {{ forloop.index }};color: {{ block.settings.subheading_text_color }};"
             {% endif %}
+            
           >
             {{ block.settings.text }}
           </div>
@@ -130,6 +129,12 @@
       "default": "background-1"
     },
     {
+      "type": "color",
+      "id": "bg_color",
+      "default": "#fff",
+      "label": "Background Color"
+    },
+    {
       "type": "checkbox",
       "id": "full_width",
       "default": true,
@@ -195,6 +200,22 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "color",
+          "id": "heading_text_color",
+          "label": "Text Color",
+          "default": "#000"
+        }, 
+        {
+          "type": "range",
+          "min": 25,
+          "max": 100,
+          "step": 1,
+          "default": 100,
+          "unit": "%",
+          "id": "heading_width",
+          "label": "Heading container width"
         }
       ]
     },
@@ -208,6 +229,12 @@
           "id": "text",
           "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
           "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        },
+        {
+          "type": "color",
+          "id": "subheading_text_color",
+          "label": "Text Color",
+          "default": "#000"
         }
       ]
     },

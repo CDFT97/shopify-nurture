@@ -3546,3 +3546,9 @@ details-disclosure > details {
 .justify-content-center {
   justify-content: center !important;
 }
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mx-auto {
+  margin: 0 auto;
+}
