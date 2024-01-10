@@ -315,6 +315,48 @@
         "articles_count": 4,
         "image_brightness": 67
       }
+    },
+    "3c8299fb-4b12-4780-8ce5-5e7b4f994863": {
+      "type": "newsletter",
+      "blocks": {
+        "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>let’s keep in touch<\/p>",
+            "subheading_text_color": "#361e45"
+          }
+        },
+        "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1",
+            "heading_text_color": "#000",
+            "heading_width": 500
+          }
+        },
+        "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-email_form-1": {
+          "type": "email_form",
+          "settings": {
+            "label_text_color": "#000",
+            "input_border_bottom_color": "#000",
+            "show_outline_input": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-paragraph-1",
+        "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-heading-1",
+        "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-email_form-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "bg_color": "#fff",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "show_waves_figure": false
+      }
     }
   },
   "order": [
@@ -324,6 +366,7 @@
     "885beb2e-5c65-47cf-a31a-a96bffcb4ab2",
     "6f21e590-48fc-46c8-a714-f7783384713d",
     "77abf5c7-8aba-48d1-98c7-16535989e482",
-    "461a63a6-fad1-4c8b-b972-cba5960b1da0"
+    "461a63a6-fad1-4c8b-b972-cba5960b1da0",
+    "3c8299fb-4b12-4780-8ce5-5e7b4f994863"
   ]
 }
