@@ -17,6 +17,13 @@
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding" style="background: {{ section.settings.bg_color }};">
+    
+    {% if section.settings.show_waves_figure %}
+      <div class="newsletter_figure_container">
+        {% render 'figure3-svg' %}
+      </div>
+    {% endif %}
+
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
@@ -191,6 +198,11 @@
   .newsletter-form__field-wrapper {
     --color-foreground: none !important;
   }
+  .newsletter_figure_container {
+    position: absolute;
+    bottom: 8%;
+    right: -4%;
+  }
 </style>
 
 {% schema %}
@@ -247,6 +259,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 52
+    }, 
+    {
+      "type": "checkbox",
+      "id": "show_waves_figure",
+      "default": false,
+      "label": "Show waves figure"
     }
   ],
   "blocks": [
