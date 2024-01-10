@@ -351,11 +351,11 @@
       ],
       "settings": {
         "color_scheme": "",
-        "bg_color": "#fff",
+        "bg_color": "#fbefee",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52,
-        "show_waves_figure": false
+        "show_waves_figure": true
       }
     }
   },
