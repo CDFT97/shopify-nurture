@@ -338,9 +338,9 @@
         "template--15213765296226__3c8299fb-4b12-4780-8ce5-5e7b4f994863-email_form-1": {
           "type": "email_form",
           "settings": {
-            "label_text_color": "#000",
-            "input_border_bottom_color": "#000",
-            "show_outline_input": false
+            "label_text_color": "#c9b4d6",
+            "input_border_bottom_color": "#361e45",
+            "show_outline_input": true
           }
         }
       },
