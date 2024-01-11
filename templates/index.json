@@ -357,6 +357,67 @@
         "padding_bottom": 52,
         "show_waves_figure": true
       }
+    },
+    "testimonials_Vmhmbk": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_9W8MTX": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0010_10.png",
+            "title": "<strong>Elsa M.<\/strong> Verified Buyer",
+            "subtitle": "Empty subtitle<strong>Great Book!<\/strong>",
+            "subtitle_margin_top": 0,
+            "text": "<p>Lorem Ipsum is simply dummy text of the printing and. Lorem Ipsum is simply dummy text of the printing and<\/p>",
+            "text_color": "#000",
+            "text_margin_top": 6
+          }
+        },
+        "testimonial_cqtGNB": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Empty title",
+            "subtitle": "Empty subtitle",
+            "subtitle_margin_top": 0,
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_color": "#000",
+            "text_margin_top": 6
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_9W8MTX",
+        "testimonial_cqtGNB"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "title_size": 14,
+        "title_color": "#000",
+        "subtitle_size": 18,
+        "subtitle_color": "#000",
+        "heading_size": "h1",
+        "image_width": "full",
+        "enable_image_container_width": false,
+        "image_container_width": 100,
+        "enable_image_height": false,
+        "image_height": 100,
+        "enable_card_height": false,
+        "card_height": 100,
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_five_stars": false,
+        "dflex_for_content_container": false,
+        "card_max_width": 570
+      }
     }
   },
   "order": [
@@ -367,6 +428,7 @@
     "6f21e590-48fc-46c8-a714-f7783384713d",
     "77abf5c7-8aba-48d1-98c7-16535989e482",
     "461a63a6-fad1-4c8b-b972-cba5960b1da0",
-    "3c8299fb-4b12-4780-8ce5-5e7b4f994863"
+    "3c8299fb-4b12-4780-8ce5-5e7b4f994863",
+    "testimonials_Vmhmbk"
   ]
 }
