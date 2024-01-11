@@ -74,8 +74,7 @@
               style="height: {{section.settings.card_height}}px;"
             {% endif %}
           >
-            <div class="d-flex multicolumn-card content-container" style="{% if section.settings.dflex_for_content_container %}display:flex;{% endif %}
-            max-width:{{section.settings.card_max_width}}px;">
+            <div class="d-flex multicolumn-card content-container" style="max-width:{{section.settings.card_max_width}}px;">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -466,12 +465,6 @@
       "id":  "show_five_stars",
       "label": "Show five stars figure",
       "default": false
-    },
-    {
-      "type": "checkbox",
-      "label": "place items in a row",
-      "default": false,
-      "id": "dflex_for_content_container"
     },
     {
       "type": "range",
