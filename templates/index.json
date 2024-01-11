@@ -366,7 +366,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0010_10.png",
             "title": "<strong>Elsa M.<\/strong> Verified Buyer",
-            "subtitle": "Empty subtitle<strong>Great Book!<\/strong>",
+            "subtitle": "<strong>Great Book!<\/strong>",
             "subtitle_margin_top": 0,
             "text": "<p>Lorem Ipsum is simply dummy text of the printing and. Lorem Ipsum is simply dummy text of the printing and<\/p>",
             "text_color": "#000",
