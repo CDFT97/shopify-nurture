@@ -3552,3 +3552,22 @@ details-disclosure > details {
 .mx-auto {
   margin: 0 auto;
 }
+.object-fit-contain {
+  object-fit: contain !important;
+}
+.object-fit-fill {
+  object-fit: fill !important;
+}
+.height-auto {
+  height: auto;
+}
+.d-flex {
+  display: flex !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
