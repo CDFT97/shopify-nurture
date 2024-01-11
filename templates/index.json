@@ -376,10 +376,11 @@
         "testimonial_cqtGNB": {
           "type": "testimonial",
           "settings": {
-            "title": "Empty title",
-            "subtitle": "Empty subtitle",
+            "image": "shopify:\/\/shop_images\/IMG_3138-scaled_2.png",
+            "title": "<strong>Linda S.<\/strong> Verified Buyer",
+            "subtitle": "<strong>Worked great!<\/strong>",
             "subtitle_margin_top": 0,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Lorem Ipsum is simply dummy text of the printing and. Lorem Ipsum is simply dummy text of the printing and.<\/p>",
             "text_color": "#000",
             "text_margin_top": 6
           }
