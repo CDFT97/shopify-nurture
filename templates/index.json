@@ -369,7 +369,7 @@
             "subtitle": "<strong>Great Book!<\/strong>",
             "subtitle_margin_top": 0,
             "text": "<p>Lorem Ipsum is simply dummy text of the printing and. Lorem Ipsum is simply dummy text of the printing and<\/p>",
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_margin_top": 6
           }
         },
@@ -381,7 +381,7 @@
             "subtitle": "<strong>Worked great!<\/strong>",
             "subtitle_margin_top": 0,
             "text": "<p>Lorem Ipsum is simply dummy text of the printing and. Lorem Ipsum is simply dummy text of the printing and.<\/p>",
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_margin_top": 6
           }
         }
@@ -395,7 +395,7 @@
         "title_size": 16,
         "title_color": "#c9b4d6",
         "subtitle_size": 18,
-        "subtitle_color": "#000",
+        "subtitle_color": "#000000",
         "heading_size": "h1",
         "image_width": "full",
         "enable_image_container_width": false,
@@ -416,8 +416,27 @@
         "padding_top": 68,
         "padding_bottom": 100,
         "show_five_stars": true,
-        "dflex_for_content_container": false,
         "card_max_width": 570
+      }
+    },
+    "17050718326fa88983": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_dVitNz": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_dVitNz"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -430,6 +449,7 @@
     "77abf5c7-8aba-48d1-98c7-16535989e482",
     "461a63a6-fad1-4c8b-b972-cba5960b1da0",
     "3c8299fb-4b12-4780-8ce5-5e7b4f994863",
-    "testimonials_Vmhmbk"
+    "testimonials_Vmhmbk",
+    "17050718326fa88983"
   ]
 }
