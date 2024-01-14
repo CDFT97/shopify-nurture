@@ -17,19 +17,11 @@
             "heading": "Shop",
             "menu": "nurture-footer"
           }
-        },
-        "text_jpxGJj": {
-          "type": "text",
-          "settings": {
-            "heading": "<strong>About Nurture Parenting<\/strong>",
-            "subtext": "<h5>Nurture Parenting’s Karen Faulkner is a baby development, sleep and toddler expert who brings calm and sleep into families and gives parents their confidence back. \u2028<\/h5><h5><br\/>Cerris Pty Ltd trading as Nurture Parenting – ABN 42 623 216 384 – Sydney, Australia<\/h5>"
-          }
         }
       },
       "block_order": [
         "brand_information_wYpHGC",
-        "link_list_4Jnxfn",
-        "text_jpxGJj"
+        "link_list_4Jnxfn"
       ],
       "settings": {
         "color_scheme": "background-1",
