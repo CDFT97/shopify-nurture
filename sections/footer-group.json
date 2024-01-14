@@ -31,6 +31,9 @@
         "text_KbdUNM",
         "link_list_4Jnxfn"
       ],
+      "custom_css": [
+        "footer {background-color: #F8F8F8;}"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": false,
