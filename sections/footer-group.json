@@ -11,6 +11,13 @@
             "show_social": true
           }
         },
+        "text_KbdUNM": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>Contact Us<\/strong>",
+            "subtext": "<p>0413 054 578<br\/>erin@nurtureparenting.com.au<\/p>"
+          }
+        },
         "link_list_4Jnxfn": {
           "type": "link_list",
           "settings": {
@@ -21,6 +28,7 @@
       },
       "block_order": [
         "brand_information_wYpHGC",
+        "text_KbdUNM",
         "link_list_4Jnxfn"
       ],
       "settings": {
