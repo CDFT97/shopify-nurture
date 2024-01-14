@@ -3571,3 +3571,13 @@ details-disclosure > details {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+.text_social_container {
+  display: inline-block;
+  margin-top: 1.5em;
+}
+.ms--12 {
+  margin-left: -12px;
+}
+.grid-gap-4 {
+  grid-gap: 4em;
+}
