@@ -5,15 +5,22 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand_information_wYpHGC": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
         "link_list_4Jnxfn": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Shop",
             "menu": "legal-support"
           }
         }
       },
       "block_order": [
+        "brand_information_wYpHGC",
         "link_list_4Jnxfn"
       ],
       "settings": {
