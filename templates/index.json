@@ -114,6 +114,9 @@
         "ab346c63-6f36-4cc3-9816-5171ca2d56f9",
         "d521c5e5-f910-49af-bb17-730ad738f3de"
       ],
+      "custom_css": [
+        ".our-brand-logo h2 {color: #361E45;}"
+      ],
       "settings": {
         "title": "featured in",
         "brand_padding_top": 50,
