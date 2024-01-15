@@ -115,7 +115,7 @@
         "d521c5e5-f910-49af-bb17-730ad738f3de"
       ],
       "custom_css": [
-        ".our-brand-logo h2 {color: #361E45;}"
+        ".our-brand-logo h2 {color: #361e45;}"
       ],
       "settings": {
         "title": "featured in",
@@ -134,8 +134,8 @@
         "margin_bottom": 75,
         "padding_top": 0,
         "padding_bottom": 0,
-        "title": "Featured Collection",
-        "title_text_color": "#000000",
+        "title": "{{ section.settings.collection.title }}",
+        "title_text_color": "#361e45",
         "collection": "our-programs",
         "product_count": 4,
         "product_show": 3,
