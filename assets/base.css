@@ -3582,5 +3582,5 @@ details-disclosure > details {
   grid-gap: 4em;
 }
 .mt-2 {
-  margin-top: 2em;
+  margin-top: 2em !important;
 }
