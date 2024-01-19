@@ -3589,4 +3589,7 @@ details-disclosure > details {
   .newsletter_figure_container {
     display: none;
   }
+  .w-100-mobile {
+    width: 100% !important;
+  }
 }
