@@ -352,6 +352,9 @@ slider-component.slider-component-full-width {
   .slider--mobile + .slider-buttons {
     display: none;
   }
+  .carousel-cell {
+      width: 33% !important;
+  }
 }
 
 .slider-button {
