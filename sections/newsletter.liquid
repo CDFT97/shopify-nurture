@@ -30,7 +30,7 @@
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} mt-1 mx-auto"
+            class="inline-richtext w-100-mobile {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} mt-1 mx-auto"
             {{ block.shopify_attributes }}
             style="color: {{ block.settings.heading_text_color }};width: {{ block.settings.heading_width }}px;font-family: sans-serif;"
           >
